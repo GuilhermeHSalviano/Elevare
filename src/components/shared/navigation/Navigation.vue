@@ -1,13 +1,13 @@
 <template>
     <header class="navigation">
-        <img src="static/logotipo.jpg" alt="logotipo">
+        <router-link to="/"><img src="static/logotipo.jpg" alt="logotipo"></router-link>
         <nav class="navigation__menu">
             <ul class="menu__links">
-                <li>Home</li>
+                <router-link to="/">Home</router-link>
                 <li>Artigos</li>
                 <li>Galeria</li>
-                <li>Contato</li>
-                <li>Endereço</li>
+                <router-link to="/contato">Contato</router-link>
+                <router-link to="/endereco" class="link">Endereço</router-link>
             </ul>
         </nav>
     </header>
@@ -19,10 +19,7 @@ export default {
 <style scoped>
     .navigation{
         align-items: center;
-        background-color: #e9d6d0;
-        border-bottom: solid;
-        border-color: #7c817a;
-        box-shadow: 3px 3px 5px  #7c817a;
+        background-color: var(--rosa-logo);
         display: flex;
         flex-direction: row;
         height: 10rem;
@@ -31,7 +28,7 @@ export default {
     }
     .navigation img{
         object-fit: cover;
-        width: 16.5%;
+        width: 15.5rem;
     }
     .navigation__menu{
         display: flex;
@@ -44,7 +41,22 @@ export default {
         list-style: none;
         width: 100%;
     }
-    .menu__links li{
+    .menu__links {
         color: #7c817a;
+        font-family: var(--texto);
     }
+    .menu__links a{
+        text-decoration: none;
+        transition-property: text-decoration;
+        transition-duration: 3s;
+        transition-delay: 3s;
+    }
+    .menu__links a:visited{
+        color: var(--cinza-logo);
+        text-decoration: none;
+    }
+    .menu__links a:hover{
+        text-decoration: underline;     
+    }
+    
 </style>

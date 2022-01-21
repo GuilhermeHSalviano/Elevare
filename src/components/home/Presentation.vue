@@ -19,6 +19,7 @@
     </div>
     <div class="presentation__studio">
         <div class="presentation__studio__text">
+            <div class="presentation__studio__bar"></div>
             <h2>O estúdio:</h2>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum enim
@@ -56,12 +57,35 @@ export default {};
 .presentation__professional__text {
   margin: 1.5rem;
 }
+.presentation__professional__text p{
+  font-family: var(--texto);
+}
+.presentation__professional__text h2{
+  color: var(--cinza-logo);
+  font-family: var(--titulo);
+  font-size: 2rem;
+}
 .presentation__studio{
+    align-items: center;
     display: flex;
     margin: 2rem;
 }
+.presentation__studio__bar{
+  background-color: var(--rosa-logo);
+  display: flex;
+  height: 1rem;
+  width: 100%;
+}
 .presentation__studio__text{
-    margin: 1.5rem;
+  margin: 1.5rem;
+}
+.presentation__studio__text p{
+  font-family: var(--texto);
+}
+.presentation__studio__text h2{
+  color: var(--cinza-logo);
+  font-family: var(--titulo);
+  font-size: 2rem;
 }
 .presentation__studio img{
     width: 15rem;
