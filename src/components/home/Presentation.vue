@@ -3,7 +3,7 @@
     <div class="presentation__professional">
       <img src="static/profissional.jpg" alt="Profissional de pilates" />
       <div class="presentation__professional__text">
-        <h2>A profissional por trás do estúdio:</h2>
+        <h2 class="professional__title">A profissional por trás do estúdio:</h2>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
           enim metus, facilisis vitae rutrum et, convallis tincidunt arcu.
@@ -89,6 +89,37 @@ export default {};
 }
 .presentation__studio img{
     width: 15rem;
+}
+
+@media screen and (max-device-width: 900px){
+    .presentation{
+        display: flex;
+        flex-direction: column;
+    }
+    .presentation__professional__text h2{
+        font-size: 60px;
+    }
+    .presentation__studio__text h2{
+        font-size: 60px;
+    }
+   
+    .presentation p{
+        font-size: 30px;
+    }
+
+    .presentation__professional{
+        flex-direction: column;
+    }
+    .presentation__professional img{
+        object-fit: cover;
+        width: 50%;
+    }
+    .presentation__studio{
+        flex-direction: column;
+    }
+    .presentation__studio img{
+        width: 50%;
+    }
 }
 
 </style>

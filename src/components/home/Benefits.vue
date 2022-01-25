@@ -55,4 +55,12 @@ export default {};
         height: 1rem;
         width: 100%;
     }
+    @media screen and (max-device-width: 900px){
+        .benefits p{
+            font-size: 30px;
+        }
+        .benefits h2{
+            font-size: 60px;
+        }
+    }
 </style>

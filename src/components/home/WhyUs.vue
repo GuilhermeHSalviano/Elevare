@@ -51,4 +51,21 @@ export default {};
         font-family: var(--texto);
         margin-left: 2rem;
     }
+    @media screen and (max-device-width: 900px){
+        .attractiveness__text__foto{
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .attractiveness__text__foto img{
+            width: 70%;
+        }
+        .attractiveness h2{
+            font-size: 60px;
+        }
+        .attractiveness__text__foto p{
+            font-size: 30px;
+            margin: 0;
+        }
+    }
 </style>

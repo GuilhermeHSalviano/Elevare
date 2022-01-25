@@ -3,11 +3,26 @@
         <router-link to="/"><img src="static/logotipo.jpg" alt="logotipo"></router-link>
         <nav class="navigation__menu">
             <ul class="menu__links">
-                <router-link to="/">Home</router-link>
-                <li>Artigos</li>
-                <li>Galeria</li>
-                <router-link to="/contato">Contato</router-link>
-                <router-link to="/endereco" class="link">Endereço</router-link>
+                <li class="menu__links__container">
+                    <router-link to="/">Home</router-link>
+                    <span></span>
+                </li>
+                <li class="menu__links__container">
+                    <router-link to="/">Artigos</router-link>
+                    <span></span>
+                </li>
+                <li class="menu__links__container">
+                    <router-link to="/">Galeria</router-link>
+                    <span></span>
+                </li>
+                <li class="menu__links__container">
+                    <router-link to="/contato">Contato</router-link>
+                    <span></span>
+                </li>
+                <li class="menu__links__container">
+                    <router-link to="/endereco" class="link">Endereço</router-link>
+                    <span></span>
+                </li>
             </ul>
         </nav>
     </header>
@@ -28,35 +43,72 @@ export default {
     }
     .navigation img{
         object-fit: cover;
-        width: 15.5rem;
+        width: 14.5rem;
     }
     .navigation__menu{
         display: flex;
-        height: 3rem;
+        height: 100%;
         width: 100%;
     }
     .menu__links{
+        align-items: center;
         display: flex;
         justify-content: space-around;
         list-style: none;
+        margin: 0;
         width: 100%;
     }
-    .menu__links {
+   
+    .menu__links a{
         color: #7c817a;
         font-family: var(--texto);
-    }
-    .menu__links a{
         text-decoration: none;
-        transition-property: text-decoration;
-        transition-duration: 3s;
-        transition-delay: 3s;
+        font-size: 1rem;
+        margin-top: 7rem;
+    }
+    .menu__links a:hover{
+        opacity: 50%;
     }
     .menu__links a:visited{
         color: var(--cinza-logo);
         text-decoration: none;
     }
-    .menu__links a:hover{
-        text-decoration: underline;     
+
+    .menu__links__container{
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        height: 100%;
     }
+
+    .menu__links__container:hover > span{
+        transition-property: all;
+        transition-duration: 0.5s;
+        transition-timing-function: ease-in;
+        height: 100%;
+        background-color: #e7c0c2;
+        width: 100%;
+    }
+
+    @media screen and (max-device-width: 900px) {
+        .navigation{
+            display: flex;
+            flex-direction: column;
+            height: auto;
+        }
+        .navigation img{
+            width: 100%;
+        }
+        .menu__links{
+            flex-direction: column;
+        }
+        .menu__links a{
+            font-size: 4rem;
+            margin: 2rem;
+        }
+    }
+    
+   
     
 </style>

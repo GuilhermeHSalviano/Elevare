@@ -1,25 +1,50 @@
 <template>
-    <section>
+    <section class="container">
         <navigation></navigation>
-        <div class="contatc">
+        <div class="contact">
             <h2 class="contact__title">Contato</h2>
             <p>Telefone: 41 11111 11111</p>
             <p>Email: stephania.salviano@hotmail.com</p>
             <h3 class="contact__subtitle">Acompanhe-nos também em nossas redes sociais:</h3>
-            <p>Instagram: </p>
-            <p>Facebook: </p>
+            <div class="contact__instagram">
+                <p>Instagram:</p>
+                <a href="https://www.instagram.com/elevare.pilatesstudio/?utm_medium=copy_link" class="contact__instagram__link">elevare.pilatesstudio</a>
+            </div>
+            <p>Facebook</p>
         </div>
+        <form action="https://formsubmit.co/guilherme.salviano@hotmail.com" class="contact__form" method="POST">
+            <h2>Você pode ainda nos mandar uma mensagem!</h2>
+            <label for="name">Nome</label>
+            <input type="text" id="name" name="name">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email">
+            <label for="massage">Mensagem</label>
+            <textarea id="message" placeholder="Escreva sua mensagem aqui" wrap="hard" cols="20" name="message"></textarea>
+            <button type="submit" name="submit" class="form__button">Enviar</button>
+        </form>
+        <ending class="ending"></ending>
     </section>
 </template>
 <script>
 import Navigation from "../shared/navigation/Navigation.vue"
+import Footer from "../shared/footer/Footer.vue"
 export default {
     components:{
-        Navigation
+        Navigation,
+        'ending': Footer
     }
 }
 </script>
 <style scoped>
+    .container{
+        display: flex;
+        flex-direction: column;
+    }
+    .contact{
+        display: flex;
+        flex-direction: column;
+        margin: 10px;
+    }
     .contact__title{
         font-family: var(--titulo);
     }
@@ -29,4 +54,52 @@ export default {
     .contact p{
         font-family: var(--texto);
     }
+    .contact__instagram{
+        align-items: center;
+        display: flex;
+    }
+    .contact__instagram__link{
+        color: black;
+        margin-left: 5px;
+        text-decoration: none;
+    }
+    .contact__instagram__link:hover{
+        opacity: 75%;
+    }
+    .ending{
+        margin-top: 20px;
+    }
+   .contact__form{
+       display: flex;
+       flex-direction: column;
+       margin: 10px;
+       width: 100%;
+   }
+   #name{
+       margin: 5px 5px;
+       width: 20%;
+   }
+   #email{
+       margin: 5px 5px;
+       width: 20%;
+   }
+   #message{
+        margin: 5px 5px;
+       height: 5rem;
+       width: 20%;
+   }
+   .form__button{
+       font-family: var(--texto);
+       background-color: var(--rosa-logo);
+       border: none;
+       height: 30px;
+       margin-top: 2rem;
+       width: 80px;
+       transition: all 0.3s ease-in-out;
+   }
+   .form__button:hover{
+       cursor: pointer;
+       transform: translate(0px, -2px);
+       box-shadow: 2px 2px 5px grey;
+   }
 </style>
