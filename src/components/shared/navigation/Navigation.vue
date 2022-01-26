@@ -43,7 +43,7 @@ export default {
     }
     .navigation img{
         object-fit: cover;
-        width: 14.5rem;
+        width: 15em;
     }
     .navigation__menu{
         display: flex;

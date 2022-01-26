@@ -52,7 +52,7 @@ export default {};
 }
 .presentation__professional img {
   object-fit: cover;
-  width: 15rem;
+  width: 15em;
 }
 .presentation__professional__text {
   margin: 1.5rem;
@@ -88,7 +88,7 @@ export default {};
   font-size: 2rem;
 }
 .presentation__studio img{
-    width: 15rem;
+    width: 15em;
 }
 
 @media screen and (max-device-width: 900px){
@@ -97,14 +97,14 @@ export default {};
         flex-direction: column;
     }
     .presentation__professional__text h2{
-        font-size: 60px;
+        font-size: 5em;
     }
     .presentation__studio__text h2{
-        font-size: 60px;
+        font-size: 5em;
     }
    
     .presentation p{
-        font-size: 30px;
+        font-size: 2.8em;
     }
 
     .presentation__professional{

@@ -61,10 +61,10 @@ export default {};
             width: 70%;
         }
         .attractiveness h2{
-            font-size: 60px;
+            font-size: 5em;
         }
         .attractiveness__text__foto p{
-            font-size: 30px;
+            font-size: 2.8em;
             margin: 0;
         }
     }
