@@ -3,18 +3,17 @@
         <navigation></navigation>
         <div class="contact">
             <h2 class="contact__title">Contato</h2>
-            <p class="contact__p">Telefone: 41 11111 11111</p>
+            <p class="contact__p">Telefone: 41 99756-0469</p>
             <p class="contact__p">Email: stephania.salviano@hotmail.com</p>
             <h3 class="contact__subtitle">Acompanhe-nos também em nossas redes sociais:</h3>
             <div class="contact__instagram">
                 <p class="contact__p">Instagram:</p>
                 <a href="https://www.instagram.com/elevare.pilatesstudio/?utm_medium=copy_link" class="contact__instagram__link contact__p">elevare.pilatesstudio</a>
             </div>
-            <p class="contact__p">Facebook</p>
         </div>
-        <form action="https://formsubmit.co/guilherme.salviano@hotmail.com" class="contact__form" method="POST">
+        <form action="https://formsubmit.co/stephaniaasalviano@gmail.com" class="contact__form" method="POST">
             <h2 class="form__title">Você pode ainda nos mandar uma mensagem!</h2>
-            <label class="form__label"for="name">Nome</label>
+            <label class="form__label" for="name">Nome</label>
             <input type="text" id="name" name="name">
             <label class="form__label" for="email">E-mail</label>
             <input type="email" id="email" name="email">
@@ -51,7 +50,7 @@ export default {
     .contact__subtitle{
         font-family: var(--titulo);
     }
-    .contact p{
+    .contact__p{
         font-family: var(--texto);
     }
     .contact__instagram{
@@ -108,6 +107,7 @@ export default {
            font-size: 5em;
        }
        .contact__p{
+           font-family: var(--texto);
            font-size: 2em;
        }
        .contact__subtitle{
@@ -118,6 +118,7 @@ export default {
            font-family: var(--titulo);
        }
        .form__label{
+           font-family: var(--texto);
            font-size: 2em;
        }
        #name, #email{
@@ -133,6 +134,9 @@ export default {
            font-size: 2em;
            height: 3em;
            width: 30%;
+       }
+       #name:focus, #email:focus, #message:focus{
+           background-color: darkgrey;
        }
    }
 </style>

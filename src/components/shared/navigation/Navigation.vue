@@ -8,14 +8,6 @@
                     <span></span>
                 </li>
                 <li class="menu__links__container">
-                    <router-link to="/">Artigos</router-link>
-                    <span></span>
-                </li>
-                <li class="menu__links__container">
-                    <router-link to="/">Galeria</router-link>
-                    <span></span>
-                </li>
-                <li class="menu__links__container">
                     <router-link to="/contato">Contato</router-link>
                     <span></span>
                 </li>

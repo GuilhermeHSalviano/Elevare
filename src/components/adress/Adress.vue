@@ -57,6 +57,9 @@ export default {
 }
 
 @media screen and (max-device-width: 900px){
+    .adress__content{
+        margin: 1em;
+    }
     .adress__title{
         font-size: 5em;
     }
